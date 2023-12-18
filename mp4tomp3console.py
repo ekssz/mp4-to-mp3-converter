@@ -7,7 +7,7 @@ url = input("Посилання на відео з ютубу: ")
 youtube = pytube.YouTube(url)
 video = youtube.streams.get_highest_resolution()
 
-download_path = "d:/programming/python/pythonconverter"
+download_path = "path to save files"
 video.download(output_path=download_path, filename="temp_video.mp4")
 
 video_path = os.path.join(download_path, "temp_video.mp4")
